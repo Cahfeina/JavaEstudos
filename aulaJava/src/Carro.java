@@ -7,7 +7,8 @@ public class Carro {
     Pessoa proprietario;
 
     void calcularValorRevenda() {
-        System.out.printf("Calcular valor de revenda de: %s %d%n", modelo, anoFabricacao);
+        System.out.printf("Calcular valor de revenda de: %s %d%n",
+                modelo, anoFabricacao);
     }
 
 }
