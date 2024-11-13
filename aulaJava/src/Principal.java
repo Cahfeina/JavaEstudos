@@ -16,6 +16,7 @@ public class Principal {
         meuCarro.cor = "Preto";
         meuCarro.fabricante = "Honda";
         meuCarro.modelo = "HR-V";
+        meuCarro.precoCompra = 120000;
         meuCarro.proprietario = eu;
 
         Carro seuCarro = new Carro();
@@ -23,10 +24,16 @@ public class Principal {
         seuCarro.cor = "Branco";
         seuCarro.fabricante = "BMW";
         seuCarro.modelo = "X6";
+        seuCarro.precoCompra = 980000;
         seuCarro.proprietario = voce;
 
-        meuCarro.calcularValorRevenda();
-        seuCarro.calcularValorRevenda();
+        System.out.printf("Tempo de uso (anos): %d%n", 2022 - meuCarro.anoFabricacao);
+        System.out.printf("Valor de revenda: %6.2f%n", meuCarro.calcularValorRevenda());
+
+//        System.out.println(meuCarro.calcularValorRevenda());
+
+//        meuCarro.calcularValorRevenda();
+//        seuCarro.calcularValorRevenda();
 
 //        System.out.println("Meu carro");
 //        System.out.println("---------");
