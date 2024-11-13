@@ -4,11 +4,17 @@ public class Carro {
     String modelo;
     String cor;
     int anoFabricacao;
+    double precoCompra;
     Pessoa proprietario;
 
-    void calcularValorRevenda() {
-        System.out.printf("Calcular valor de revenda de: %s %d%n",
-                modelo, anoFabricacao);
+    double calcularValorRevenda() {
+        int tempoDeUsoEmAnos = 2022 - anoFabricacao;
+        int vidaUtilEmAnos = 20;
+        double valorRevenda = (precoCompra / vidaUtilEmAnos) * (vidaUtilEmAnos - tempoDeUsoEmAnos);
+        if (valorRevenda < 0) {
+            valorRevenda = 0;
+        }
+        return  valorRevenda;
     }
 
 }
